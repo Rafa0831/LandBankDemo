@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LANDBANK iAccess (Demo)</title>
+<style>
+  *{box-sizing:border-box;}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#fff;color:#222;}
+
+  .demo-banner{background:#ffefc2;border-bottom:1px solid #f7b500;color:#7a5900;text-align:center;padding:6px;font-size:12px;font-weight:bold;}
+
+  /* header */
+  .header{background:linear-gradient(90deg,#2f7d32,#7ab82e);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;}
+  .header-left{display:flex;align-items:center;gap:18px;color:#fff;}
+  .landbank-logo{font-size:26px;font-weight:bold;letter-spacing:1px;}
+  .divider{width:1px;height:34px;background:rgba(255,255,255,.6);}
+  .ofb{display:flex;align-items:center;gap:8px;}
+  .ofb-icon{background:#fff;color:#c0392b;font-weight:bold;font-size:20px;padding:2px 7px;border-radius:3px;}
+  .ofb-text{font-size:15px;line-height:1.1;color:#fff;}
+  .ofb-text b{display:block;}
+  .ofb-text span{color:#f2d94e;font-weight:bold;}
+  .iaccess{color:#fff;font-size:34px;font-style:italic;font-weight:bold;}
+
+  .navbar{background:#1f5c22;padding:10px 40px;font-size:13px;}
+  .navbar a{color:#fff;text-decoration:underline;margin-right:14px;}
+  .navbar a:last-child{margin-right:0;}
+
+  /* body layout */
+  .content{display:flex;padding:30px 40px;gap:30px;align-items:flex-start;flex-wrap:wrap;}
+  .left{flex:1;min-width:320px;}
+  .left h1{color:#1f5c22;font-size:30px;margin:0 0 20px 0;}
+
+  .advisory{background:linear-gradient(135deg,#6fbf3e,#4c9a2a);border-radius:6px;padding:25px;color:#fff;display:flex;justify-content:space-between;gap:10px;}
+  .advisory-tag{background:#1f5c22;display:inline-block;padding:6px 14px;border-radius:14px;font-weight:bold;font-size:13px;margin-bottom:14px;}
+  .advisory h2{font-size:18px;margin:0 0 10px 0;}
+  .advisory p{font-size:13px;line-height:1.5;margin:0 0 10px 0;}
+  .advisory .icon{font-size:60px;align-self:center;}
+
+  .warning{margin-top:20px;font-size:12px;color:#222;}
+  .warning b{color:#c0392b;}
+  .warning ol{margin:6px 0 0 18px;padding:0;}
+
+  /* login card */
+  .login-card{width:330px;background:#fff;border-radius:8px;box-shadow:0 2px 14px rgba(0,0,0,.2);padding:30px 26px;}
+  .login-card input{width:100%;padding:12px;margin-bottom:16px;border:none;background:#d9d9d9;border-radius:4px;font-size:14px;}
+  .login-card input::placeholder{color:#555;}
+  .login-btn{width:100%;padding:13px;background:#c6d92e;border:none;border-radius:4px;font-weight:bold;font-size:15px;color:#1f5c22;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;}
+  .login-btn:hover{background:#b9cc26;}
+  .login-links{text-align:center;font-size:12.5px;margin-top:16px;line-height:1.8;}
+  .login-links a{color:#4c9a2a;text-decoration:none;font-weight:bold;}
+  .login-links .plain{color:#222;}
+  .login-links .row{margin-top:6px;}
+
+  .footer-note{text-align:center;font-size:11px;color:#888;padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="landbank-logo">LANDBANK</div>
+    <div class="divider"></div>
+    <div class="ofb">
+      <div class="ofb-icon">LB</div>
+      <div class="ofb-text"><b>Overseas</b><span>Filipino</span><span>Bank</span></div>
+    </div>
+  </div>
+  <div class="iaccess">iAccess</div>
+</div>
+
+<div class="navbar">
+  <a href="#">About Us</a>
+  <a href="#">FAQs</a>
+  <a href="#">Security Policy</a>
+  <a href="#">Data Privacy Statement</a>
+  <a href="#">Advisory on ATM Use</a>
+  <a href="#">iAccess Features</a>
+  <a href="#">Find Us</a>
+</div>
+
+<div class="content">
+  <div class="left">
+    <h1>Welcome to iAccess!</h1>
+
+    <div class="advisory">
+      <div>
+        <div class="advisory-tag">CLIENT ADVISORY</div>
+        <h2>Stay one step ahead of scams with enhanced LANDBANK iAccess features!</h2>
+        <p>LANDBANK iAccess now features enhanced security controls, including <b>Lock My Access</b>, <b>Money Lock</b>, <b>Customized Transaction Limits</b>, and <b>Transaction Pause Period (TPP)</b>, providing added protection against unauthorized transactions and account misuse.</p>
+        <p>Activate these security features for a safer and more secure online banking experience.</p>
+      </div>
+      <div class="icon">🛡️</div>
+    </div>
+
+    <div class="warning">
+      <b>WARNING:</b> iAccess is for authorized clients only. It shall be a criminal offense for any person to:
+      <ol>
+        <li>Obtain access to data without authority;</li>
+        <li>Corrupt, alter, steal or destroy data;</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="login-card">
+    <form onsubmit="window.location.href='change-password.html'; return false;">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit" class="login-btn">👤 LOGIN</button>
+    </form>
+    <div class="login-links">
+      <div>Not yet enrolled? <a href="#">Sign up now!</a></div>
+      <div>Upon login, I hereby agree to its <a href="#">Terms and Conditions</a></div>
+      <div>Click <a href="#">here</a> to download enrollment form.</div>
+      <div class="row"><a href="#">Unlock ID</a> &nbsp;&nbsp; <a href="#">Forgot Password</a></div>
+      <div><a href="#">Lock My Access</a></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
